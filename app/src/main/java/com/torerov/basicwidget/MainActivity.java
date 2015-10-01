@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     CheckBox enableView;
     TextView messageView;
+    RadioGroup group;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +36,19 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "checked : " + isChecked, Toast.LENGTH_SHORT).show();
             }
         });
+
+        group = (RadioGroup)findViewById();
     }
 
     boolean isForced = false;
     public void onButtonClick(View view){
-        String checkedText = enableView.isChecked()? "Enable True" : "Enable False";
+//        String checkedText = enableView.isChecked()? "Enable True" : "Enable False";
+//        Toast.makeText(this, checkedText, Toast.LENGTH_SHORT).show();
+//        isForced = true;
+//        enableView.setChecked(!enableView.isChecked());
+//        isForced = false;
 
-        Toast.makeText(this, checkedText, Toast.LENGTH_SHORT).show();
 
-        isForced = true;
-        enableView.setChecked(!enableView.isChecked());
-        isForced = false;
     }
 
     @Override
